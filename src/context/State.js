@@ -1,7 +1,7 @@
-import React, { useReducer, useEffect, useState } from "react";
+import React, { useReducer} from "react";
 import Context from "./Context";
 import Reducer from "./Reducer";
-import { HANDLECHANGE, SEARCH, CLEAR, BG } from "./types";
+import { HANDLECHANGE, SEARCH, CLEAR } from "./types";
 import info from "../info";
 
 const State = props => {

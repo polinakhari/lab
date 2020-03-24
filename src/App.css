@@ -58,9 +58,11 @@ ul {
 }
 .navbar a.active {
   color: #245894;
+  
 }
 .navbar a:hover {
   color: #a068ff;
+  
 }
 
 .navbar a::after {
@@ -245,7 +247,7 @@ body {
 .choice .collection{
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   width: 30%;
   
 }
@@ -286,6 +288,7 @@ body {
   font-size: 23px;
   padding-right: 20px;
   color: #245894;
+  color: #fff
 }
 .collection .collection_item:last-child {
   width: 100%;
@@ -308,6 +311,7 @@ body {
   width: 100%;
   text-transform: uppercase;
   color: #245894;
+  color:#fff;
 }
 .example_f span:after {
   content: '\00bb';
@@ -441,4 +445,36 @@ body{
 .recom_list{
   display: flex;
   flex-direction: column;
+}
+.recom_item{
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+.recom-top{
+  display: flex;
+  justify-content: flex-start;
+
+}
+.count{
+  position: relative;
+  color: #fff;
+  margin-right: 30px;
+}
+.count:after{
+ content: " ";
+ position: absolute;
+ width: 31px;
+ height: 31px;
+ background-color: rgb(145, 170, 254);
+ border-radius: 50%; 
+ left: -11px;
+ top: -4px;
+    z-index: -1;
+}
+.recom_title{
+  
+}
+.recom-top, .recom_text{
+width: 100%;
 }
