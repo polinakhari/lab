@@ -9,9 +9,9 @@ const State = props => {
   const [state, dispatch] = useReducer(Reducer, initialState);
   // Search recomendation
 
-  const searchRecomendations = text => {
-    const data = [...state.domain, ...state.site].filter(x =>
-      x.text.includes(text)
+  const searchRecomendations = text => {    
+    const data = [...state.domain, ...state.site, ...state.page, ...state.recomendation, ...state.communication].filter(x =>
+      x.text.toLowerCase().includes(text.toLowerCase()) || x.recomendation.toLowerCase().includes(text.toLowerCase()) || x.title.toLowerCase().includes(text.toLowerCase())
     );
     console.log(data);
     console.log(text);
@@ -21,8 +21,8 @@ const State = props => {
     });
   };
   //Change status
-  const handleChange = e => {
-    let newUsers = [...state.domain];
+  const handleChange = (e, type) => {    
+    let newUsers = [...state[type]];    
     if (e.target.value === "true") newUsers[e.target.name].status = true;
     else newUsers[e.target.name].status = false;
 

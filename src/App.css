@@ -2,8 +2,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background: rgb(255, 255, 255);
-  
+  background: rgb(255, 255, 255);  
   color: #333;
 }
 
@@ -104,6 +103,11 @@ body {
   color: #c5d1f8;
   font-size: 18px;
   background-color: rgba(145, 170, 254, 1);
+  font-family: Roboto;
+}
+
+input::placeholder {
+  font-family: Roboto;
 }
 
 .search:hover  .searchTerm{

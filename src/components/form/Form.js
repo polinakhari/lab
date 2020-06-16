@@ -8,7 +8,7 @@ export default function Form(props) {
   const {type} = props;
   const { handleChange } = context;  
   const data = context[type].map((x, idx) => (
-    <InputItem data={x} idx={idx} key={idx} handleChange={handleChange} />
+    <InputItem data={x} type={type} idx={idx} key={idx} handleChange={handleChange} />
   ));
   document.body.classList.add("bg_new");
   
