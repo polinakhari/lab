@@ -7,10 +7,10 @@ import info from "../info";
 const State = props => {
   const initialState = { ...info, search: [] };
   const [state, dispatch] = useReducer(Reducer, initialState);
-  // Search recomendation
+  // Search recomendation  
 
   const searchRecomendations = text => {    
-    const data = [...state.domain, ...state.site, ...state.page, ...state.recomendation, ...state.communication].filter(x =>
+    const data = [...state.domain, ...state.site, ...state.page, ...state.feedback, ...state.communication].filter(x =>
       x.text.toLowerCase().includes(text.toLowerCase()) || x.recomendation.toLowerCase().includes(text.toLowerCase()) || x.title.toLowerCase().includes(text.toLowerCase())
     );
     console.log(data);
